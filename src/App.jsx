@@ -72,27 +72,29 @@ const App = () => {
   };
 
   return (
-    <Container className="container">
-      <CssBaseline />
-      <Header />
-      <Grid container spacing={3}>
-        <Grid item xs={12} md={6}>
-          <SavingsForm onSubmit={handleFormSubmit} />
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <EconomicSituationInfo />
-        </Grid>
-        {savingsPlan && (
-          <Grid item xs={12}>
-            <Results savings={savingsPlan} time={savingsPlan.time} />
+    <div className="background">
+      <Container className="container">
+        <CssBaseline />
+        <Header />
+        <Grid container spacing={3}>
+          <Grid item xs={12} md={6}>
+            <SavingsForm onSubmit={handleFormSubmit} />
           </Grid>
-        )}
-        <Grid item xs={12}>
-          <HistoryList history={history} onHistoryClick={handleHistoryClick} />
+          <Grid item xs={12} md={6}>
+            <EconomicSituationInfo />
+          </Grid>
+          {savingsPlan && (
+            <Grid item xs={12}>
+              <Results savings={savingsPlan} time={savingsPlan.time} />
+            </Grid>
+          )}
+          <Grid item xs={12}>
+            <HistoryList history={history} onHistoryClick={handleHistoryClick} />
+          </Grid>
         </Grid>
-      </Grid>
-      <Footer />
-    </Container>
+        <Footer />
+      </Container>
+    </div>
   );
 };
 
