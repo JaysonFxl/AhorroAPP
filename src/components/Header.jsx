@@ -10,9 +10,10 @@ const Header = () => {
     <AppBar position="static">
       <Toolbar>
         <SavingsIcon style={{ marginRight: '10px' }} />
-        <Typography variant="h6">
-          {t('Planificador de Ahorro - Chile')}
+        <Typography variant="h6" style={{ flexGrow: 1 }}>
+          {t('Savings Planner - Chile')}
         </Typography>
+        <img src="chile.png" alt="Chile Flag" style={{ width: '50px', height: '50px'}} />
       </Toolbar>
     </AppBar>
   );
