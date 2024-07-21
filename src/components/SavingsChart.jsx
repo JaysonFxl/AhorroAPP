@@ -13,7 +13,7 @@ const SavingsChart = ({ savingsData, time }) => {
       >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="month" />
-        <YAxis tickFormatter={formatNumber} />
+        <YAxis tickFormatter={formatNumber} domain={['auto', 'auto']} />
         <Tooltip formatter={(value) => formatNumber(Math.floor(value))} />
         <Legend />
         <Line type="monotone" dataKey="savings" stroke="#8884d8" activeDot={{ r: 8 }} />
